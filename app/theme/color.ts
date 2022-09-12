@@ -1,5 +1,7 @@
 import { palette } from "./palette"
 
+// COLOR GENERATOR: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=28b3f4&secondary.color=28f4cf
+
 /**
  * Roles for colors.  Prefer using these over the palette.  It makes it easier
  * to change things.
@@ -43,7 +45,7 @@ export const color = {
   /**
    * Secondary information.
    */
-  dim: palette.lightGrey,
+  lightGrey: palette.lightGrey,
   /**
    * Error messages and icons.
    */

@@ -1,9 +1,9 @@
 {
-  "name": "PizzaApp",
-  "displayName": "PizzaApp",
+  "name": "Splitsy",
+  "displayName": "Splitsy",
   "expo": {
-    "name": "PizzaApp",
-    "slug": "PizzaApp",
+    "name": "Splitsy",
+    "slug": "Splitsy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/app-icon-all.png",

@@ -70,14 +70,14 @@ const CONTENT: TextStyle = {
   marginBottom: spacing[5],
 }
 const CONTINUE: ViewStyle = {
-  paddingVertical: spacing[4],
-  paddingHorizontal: spacing[4],
+ // paddingVertical: spacing[4],
+ // paddingHorizontal: spacing[4],
   backgroundColor: color.palette.deepPurple,
 }
 const CONTINUE_TEXT: TextStyle = {
   ...TEXT,
   ...BOLD,
-  fontSize: 13,
+  fontSize: 14,
   letterSpacing: 2,
 }
 const FOOTER: ViewStyle = { backgroundColor: "#20162D" }
@@ -89,6 +89,7 @@ const FOOTER_CONTENT: ViewStyle = {
 export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> = observer(
   ({ navigation }) => {
     const nextScreen = () => navigation.navigate("demo")
+    const toSignUp = () => navigation.navigate("signUp")
 
     return (
       <View testID="WelcomeScreen" style={FULL}>
@@ -119,6 +120,17 @@ export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> 
               textStyle={CONTINUE_TEXT}
               tx="welcomeScreen.continue"
               onPress={nextScreen}
+            />
+          </View>
+        </SafeAreaView>
+        <SafeAreaView style={FOOTER}>
+          <View style={FOOTER_CONTENT}>
+            <Button
+              testID="next-screen-button"
+              style={CONTINUE}
+              textStyle={CONTINUE_TEXT}
+              text="Open Sign Up Page"
+              onPress={toSignUp}
             />
           </View>
         </SafeAreaView>
