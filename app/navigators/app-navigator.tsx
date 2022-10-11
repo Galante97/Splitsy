@@ -10,6 +10,8 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { WelcomeScreen, DemoScreen, DemoListScreen, SignUpScreen } from "../screens"
 import { navigationRef, useBackButtonHandler } from "./navigation-utilities"
+import { UserProfileScreen } from "../screens/UserProfile/UserProfileScreen"
+import { ComponentViewerScreen } from "../screens/ComponentViewer/ComponentViewer"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -28,6 +30,8 @@ export type NavigatorParamList = {
   demo: undefined
   demoList: undefined
   signUp: undefined
+  UserProfile: undefined
+  ComponentViewer: undefined
   // 🔥 Your screens go here
 }
 
@@ -46,6 +50,9 @@ const AppStack = () => {
       <Stack.Screen name="demo" component={DemoScreen} />
       <Stack.Screen name="demoList" component={DemoListScreen} />
       <Stack.Screen name="signUp" component={SignUpScreen} />
+      <Stack.Screen name="UserProfile" component={UserProfileScreen} />
+      <Stack.Screen name="ComponentViewer" component={ComponentViewerScreen} />
+
       {/** 🔥 Your screens go here */}
     </Stack.Navigator>
   )

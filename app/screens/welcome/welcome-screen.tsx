@@ -90,6 +90,7 @@ export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> 
   ({ navigation }) => {
     const nextScreen = () => navigation.navigate("demo")
     const toSignUp = () => navigation.navigate("signUp")
+    const toComponents = () => navigation.navigate("ComponentViewer")
 
     return (
       <View testID="WelcomeScreen" style={FULL}>
@@ -131,6 +132,17 @@ export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> 
               textStyle={CONTINUE_TEXT}
               text="Open Sign Up Page"
               onPress={toSignUp}
+            />
+          </View>
+        </SafeAreaView>
+        <SafeAreaView style={FOOTER}>
+          <View style={FOOTER_CONTENT}>
+            <Button
+              testID="next-screen-button"
+              style={CONTINUE}
+              textStyle={CONTINUE_TEXT}
+              text="Open Components"
+              onPress={toComponents}
             />
           </View>
         </SafeAreaView>
